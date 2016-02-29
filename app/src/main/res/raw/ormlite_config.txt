@@ -1,0 +1,97 @@
+#
+# generated on 2016/02/27 01:52:29
+#
+# --table-start--
+dataClass=user.com.sg.socialfeeddemo.database.model.Profile
+tableName=profile
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=_id
+canBeNull=false
+id=true
+# --field-end--
+# --field-start--
+fieldName=name
+columnName=name
+canBeNull=false
+# --field-end--
+# --field-start--
+fieldName=photoPath
+columnName=photo_path
+# --field-end--
+# --field-start--
+fieldName=feeds
+foreignCollection=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=user.com.sg.socialfeeddemo.database.model.Comment
+tableName=comment
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=_id
+canBeNull=false
+id=true
+# --field-end--
+# --field-start--
+fieldName=commentator
+columnName=profile
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=comment
+columnName=comment_text
+# --field-end--
+# --field-start--
+fieldName=feed
+columnName=feed
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=user.com.sg.socialfeeddemo.database.model.Feed
+tableName=feed
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=_id
+canBeNull=false
+id=true
+# --field-end--
+# --field-start--
+fieldName=profile
+columnName=profile
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=caption
+columnName=caption
+# --field-end--
+# --field-start--
+fieldName=commentCount
+columnName=comment_count
+# --field-end--
+# --field-start--
+fieldName=likesCount
+columnName=likes_count
+# --field-end--
+# --field-start--
+fieldName=photoPath
+columnName=photo_path
+# --field-end--
+# --field-start--
+fieldName=comments
+foreignCollection=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
